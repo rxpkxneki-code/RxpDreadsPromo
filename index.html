@@ -1,168 +1,184 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RXP Dreads</title>
-  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'UnifrakturCook', cursive;
-      background: url("https://w0.peakpx.com/wallpaper/919/991/HD-wallpaper-dark-cemetery-spooky-night.jpg") no-repeat center center fixed;
-      background-size: cover;
-      color: #b30000;
-      text-align: center;
-      position: relative;
-      overflow-x: hidden;
-      cursor: url("https://i.ibb.co/R9tM0wq/skull-cursor.png"), auto;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RxpDreads - Redes y Precios</title>
+    <!-- Fuente gótica -->
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+    <!-- Íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0a0a0a url('https://i.imgur.com/9yGf4rK.png') no-repeat center top;
+            background-size: cover;
+            color: #ff0000;
+            font-family: 'UnifrakturCook', cursive;
+        }
 
-    /* Niebla animada */
-    .fog {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 200%;
-      height: 100%;
-      background: url("https://i.ibb.co/3cX4k6n/fog.png") repeat-x;
-      background-size: cover;
-      opacity: 0.4;
-      animation: moveFog 60s linear infinite;
-      pointer-events: none;
-      z-index: 1;
-    }
+        h1, h2 {
+            text-align: center;
+            text-shadow: 3px 3px 10px #000;
+        }
 
-    @keyframes moveFog {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+        h1 {
+            margin-top: 50px;
+            font-size: 3em;
+        }
 
-    header {
-      background: rgba(0, 0, 0, 0.8);
-      padding: 20px;
-      font-size: 2.5em;
-      border-bottom: 2px solid #b30000;
-      position: relative;
-      z-index: 2;
-      animation: flicker 3s infinite alternate;
-    }
+        .section {
+            background: rgba(0, 0, 0, 0.8);
+            margin: 50px auto;
+            padding: 30px;
+            border: 2px solid #ff0000;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 700px;
+        }
 
-    /* Parpadeo tétrico del título */
-    @keyframes flicker {
-      0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% { 
-        text-shadow: 0 0 15px #ff0000, 0 0 30px #660000;
-        color: #ff0000; 
-      }
-      20%, 24%, 55% { 
-        text-shadow: none; 
-        color: #660000; 
-      }
-    }
+        /* Botones Redes Sociales estilo anime fuego */
+        .social-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
 
-    section {
-      padding: 50px 20px;
-      background: rgba(0, 0, 0, 0.75);
-      margin: 30px auto;
-      max-width: 800px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px #330000;
-      position: relative;
-      z-index: 2;
-    }
+        .social-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 250px;
+            padding: 15px;
+            border: 2px solid #ff0000;
+            border-radius: 10px;
+            color: #ff0000;
+            text-decoration: none;
+            font-size: 1.5em;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
 
-    h2 {
-      font-size: 2em;
-      margin-bottom: 20px;
-      color: #ff0000;
-      text-shadow: 2px 2px 5px #660000;
-    }
+        .social-button i {
+            margin-right: 15px;
+        }
 
-    ul {
-      list-style: none;
-      padding: 0;
-      font-size: 1.5em;
-    }
+        .social-button::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,0,0,0.5) 0%, transparent 70%);
+            transform: rotate(45deg) scale(0);
+            transition: transform 0.5s ease;
+        }
 
-    li {
-      margin: 10px 0;
-    }
+        .social-button:hover::before {
+            transform: rotate(45deg) scale(1);
+        }
 
-    a {
-      color: #ff1a1a;
-      text-decoration: none;
-      font-size: 1.5em;
-      position: relative;
-      transition: 0.3s;
-    }
+        .social-button:hover {
+            color: #0a0a0a;
+            background-color: #ff0000;
+            transform: scale(1.1);
+            box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000 inset;
+        }
 
-    /* Efecto sangrado en hover */
-    a::after {
-      content: "";
-      position: absolute;
-      left: 50%;
-      transform: translateX(-50%);
-      bottom: -5px;
-      width: 0;
-      height: 5px;
-      background: red;
-      box-shadow: 0 5px 15px red;
-      transition: width 0.3s ease;
-    }
+        /* Tabla de precios estilo tétrico */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
 
-    a:hover {
-      color: #ff0000;
-      text-shadow: 0 0 15px #ff0000, 0 0 25px #b30000;
-    }
+        table th, table td {
+            border: 2px solid #ff0000;
+            padding: 10px;
+            text-align: center;
+        }
 
-    a:hover::after {
-      width: 100%;
-    }
+        table th {
+            background-color: #1a0000;
+        }
 
-    footer {
-      padding: 20px;
-      background: rgba(0, 0, 0, 0.85);
-      border-top: 2px solid #b30000;
-      font-size: 1.2em;
-      position: relative;
-      z-index: 2;
-    }
-  </style>
+        table tr:nth-child(even) {
+            background-color: #330000;
+        }
+
+        table tr:hover {
+            background-color: #550000;
+            transform: scale(1.02);
+            transition: all 0.3s ease;
+        }
+
+        footer {
+            text-align: center;
+            margin: 50px 0;
+            color: #ff0000;
+        }
+    </style>
 </head>
 <body>
-  <!-- Efecto niebla -->
-  <div class="fog"></div>
+    <h1>RxpDreads - Mis Redes y Precios</h1>
 
-  <header>
-    ✦ RXP Dreads ✦
-  </header>
+    <!-- Sección Redes Sociales -->
+    <div class="section">
+        <h2>Sígueme y mantente conectado</h2>
+        <div class="social-buttons">
+            <a href="https://www.instagram.com/rxpboikxneki?igsh=MWJ3eHY5MTZ4bW80bg==" target="_blank" class="social-button">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+            <a href="https://youtube.com/@rxpkaneki?si=XbCo6FvvwQtXgFdx" target="_blank" class="social-button">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a href="https://www.facebook.com/share/17GaoMvLKu/" target="_blank" class="social-button">
+                <i class="fab fa-facebook"></i> Facebook
+            </a>
+            <a href="https://wa.me/50662319505" target="_blank" class="social-button">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </div>
 
-  <section id="servicios">
-    <h2>Servicios</h2>
-    <p>✔️ Creación de rastas<br>✔️ Mantenimiento<br>✔️ Extensiones<br>✔️ Estilos personalizados</p>
-  </section>
+    <!-- Sección Precios -->
+    <div class="section">
+        <h2>🔥 ¡Mira mis precios de Rastas y consigue tu estilo único! 🔥</h2>
+        <table>
+            <tr>
+                <th>Servicio</th>
+                <th>Precio (₡)</th>
+            </tr>
+            <tr>
+                <td>Rastas cortas</td>
+                <td>8,000</td>
+            </tr>
+            <tr>
+                <td>Rastas medias</td>
+                <td>12,000</td>
+            </tr>
+            <tr>
+                <td>Rastas largas</td>
+                <td>16,000</td>
+            </tr>
+            <tr>
+                <td>Mantenimiento</td>
+                <td>5,000</td>
+            </tr>
+            <tr>
+                <td>Retoques / Reparación</td>
+                <td>3,500</td>
+            </tr>
+        </table>
+    </div>
 
-  <section id="precios">
-    <h2>Lista de Precios</h2>
-    <ul>
-      <li>Inicio de rastas — $40</li>
-      <li>Mantenimiento — $25</li>
-      <li>Extensiones — $50</li>
-      <li>Diseños personalizados — Desde $30</li>
-    </ul>
-  </section>
-
-  <section id="redes">
-    <h2>Sígueme</h2>
-    <p>
-      <a href="https://instagram.com" target="_blank">Instagram</a> | 
-      <a href="https://facebook.com" target="_blank">Facebook</a> | 
-      <a href="https://wa.me/50600000000" target="_blank">WhatsApp</a>
-    </p>
-  </section>
-
-  <footer>
-    © 2025 RXP Dreads - Arte en Rastas
-  </footer>
+    <footer>
+        © 2025 RxpDreads - Todos los derechos reservados
+    </footer>
 </body>
 </html>

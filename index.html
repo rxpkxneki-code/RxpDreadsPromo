@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RxpDreads - Redes y Precios</title>
-    <!-- Fuente gótica -->
     <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
-    <!-- Íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -16,17 +14,14 @@
             color: #ff0000;
             font-family: 'UnifrakturCook', cursive;
         }
-
         h1, h2 {
             text-align: center;
             text-shadow: 3px 3px 10px #000;
             margin: 20px 0;
         }
-
         h1 {
             font-size: 2.5em;
         }
-
         .section {
             background: rgba(0, 0, 0, 0.95);
             margin: 30px auto;
@@ -36,15 +31,12 @@
             width: 90%;
             max-width: 900px;
         }
-
-        /* Botones Redes Sociales estilo anime fuego */
         .social-buttons {
             display: flex;
             flex-direction: column;
             gap: 15px;
             align-items: center;
         }
-
         .social-button {
             display: flex;
             align-items: center;
@@ -61,11 +53,9 @@
             overflow: hidden;
             transition: all 0.3s ease;
         }
-
         .social-button i {
             margin-right: 12px;
         }
-
         .social-button::before {
             content: '';
             position: absolute;
@@ -77,68 +67,54 @@
             transform: rotate(45deg) scale(0);
             transition: transform 0.5s ease;
         }
-
         .social-button:hover::before {
             transform: rotate(45deg) scale(1);
         }
-
         .social-button:hover {
             color: #000000;
             background-color: #ff0000;
             transform: scale(1.1);
             box-shadow: 0 0 20px #ff0000, 0 0 40px #ff0000 inset;
         }
-
-        /* Tabla de precios estilo tétrico y responsive */
         .table-container {
             overflow-x: auto;
             margin-top: 20px;
         }
-
         table {
             width: 100%;
             border-collapse: collapse;
             font-size: 1.1em;
             min-width: 600px;
         }
-
         table th, table td {
             border: 2px solid #ff0000;
             padding: 10px;
             text-align: center;
         }
-
         table th {
             background-color: #1a0000;
         }
-
         table tr:nth-child(even) {
             background-color: #330000;
         }
-
         table tr:hover {
             background-color: #550000;
             transform: scale(1.01);
             transition: all 0.3s ease;
         }
-
         footer {
             text-align: center;
             margin: 40px 0;
             color: #ff0000;
         }
-
-        /* Media Queries para móviles */
         @media (max-width: 500px) {
             h1 {
                 font-size: 2em;
             }
-
             .social-button {
                 font-size: 1.1em;
                 max-width: 220px;
             }
-
             table th, table td {
                 padding: 8px;
                 font-size: 0.9em;
@@ -149,7 +125,6 @@
 <body>
     <h1>RxpDreads - Redes y Precios</h1>
 
-    <!-- Sección Redes Sociales -->
     <div class="section">
         <h2>Sígueme y mantente conectado</h2>
         <div class="social-buttons">
@@ -165,10 +140,18 @@
             <a href="https://wa.me/50662319505" target="_blank" class="social-button">
                 <i class="fab fa-whatsapp"></i> WhatsApp
             </a>
+            <a href="https://t.me/ripboysgang2017" target="_blank" class="social-button">
+                <i class="fab fa-telegram"></i> Telegram
+            </a>
+            <a href="https://www.tiktok.com/@rip.kxneki?_t=ZM-8zmiBO49dmI&_r=1" target="_blank" class="social-button">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+            <a href="https://on.soundcloud.com/tFzUluj5nFxGQda3cr" target="_blank" class="social-button">
+                <i class="fab fa-soundcloud"></i> SoundCloud
+            </a>
         </div>
     </div>
 
-    <!-- Sección Precios -->
     <div class="section">
         <h2>🔥 ¡Transforma tu estilo con RxpDreads! ¡Mira nuestros precios! 🔥</h2>
         <div class="table-container">

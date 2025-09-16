@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RxpDreads - Rastas Urbanas</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+  body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(180deg, #0a0a0a, #1c1c1c);
+    color: #f2f2f2;
+    transition: background 0.5s;
+  }
+
+  body:hover {
+    background: linear-gradient(180deg, #0f0f0f, #262626);
+  }
+
+  header {
+    text-align: center;
+    padding: 50px 20px;
+    background: #111;
+  }
+
+  header h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 3em;
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00, 0 0 20px #ffcc00;
+    margin: 0;
+    transition: transform 0.3s;
+  }
+
+  header h1:hover {
+    transform: scale(1.1);
+  }
+
+  header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #ccc;
+  }
+
+  .hero-image {
+    display: block;
+    margin: 20px auto;
+    max-width: 400px;
+    transition: transform 0.5s;
+  }
+
+  .hero-image:hover {
+    transform: rotate(-3deg) scale(1.05);
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    background-color: #222;
+    padding: 15px 0;
+  }
+
+  nav a {
+    color: #f2f2f2;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  nav a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+  }
+
+  section {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ffcc00;
+    transition: 0.3s;
+  }
+
+  section h2:hover {
+    text-shadow: 0 0 15px #ffcc00, 0 0 25px #ffcc00;
+  }
+
+  .services-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    transition: transform 0.3s;
+  }
+
+  .services-table th, .services-table td {
+    border: 1px solid #444;
+    padding: 12px;
+    text-align: center;
+    transition: background 0.3s, transform 0.3s;
+  }
+
+  .services-table th {
+    background-color: #333;
+    color: #ffcc00;
+  }
+
+  .services-table tr:nth-child(even) {
+    background-color: #222;
+  }
+
+  .services-table tr:hover {
+    background-color: #333;
+    transform: scale(1.02);
+  }
+
+  .contact-info, .socials {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .socials a, .btn {
+    display: inline-block;
+    background: #ffcc00;
+    color: #111;
+    text-decoration: none;
+    margin: 10px;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .socials a:hover, .btn:hover {
+    background: #e6b800;
+    transform: scale(1.1);
+  }
+
+  footer {
+    background-color: #111;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+    color: #888;
+  }
+
+  @media (max-width: 600px) {
+    header h1 {
+      font-size: 2em;
+    }
+
+    section h2 {
+      font-size: 2em;
+    }
+
+    .services-table th, .services-table td {
+      padding: 8px;
+      font-size: 0.9em;
+    }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>RxpDreads</h1>
+  <p>Ven y hazte rastas con nosotros, ¡no te vas a arrepentir!</p>
+  <!-- Imagen embebida en Base64 -->
+  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMgAAADICAYAAACtWK6eAAABp0lEQVR4nO3SsQ3CMBCA4ev9PtzmHZT6CCV4Dc+3sNf+KwnyBvgF6Bn1vEDgAAEBAQEBAQEBAQEBAQEBAYP4ZKQH9vLuR/zT6/6H4+wrQBAQEBAQEBAQEBAQEBAYP0Aglb7b0fcP0qOgAAQEBAT8BXQ3mX95u3l++z73vse50vLk2DAgICAv4FawL9A8p7czSBAQEBAQEBAQEBAQEBAYH0Cblc0D4c+vJvP8EQkBAQEBAQEBAQEBAQEBgfwOTXhz3k+zIAAAAASUVORK5CYII=" alt="Caravela con rastas estilo cartoon" class="hero-image">
+</header>
+
+<nav>
+  <a href="#services">Servicios</a>
+  <a href="#contact">Contacto</a>
+  <a href="#socials">Redes</a>
+</nav>
+
+<section id="services">
+  <h2>Servicios y Precios</h2>
+  <table class="services-table">
+    <tr>
+      <th>Servicio</th>
+      <th>Precio</th>
+      <th>Duración</th>
+      <th>Detalles</th>
+    </tr>
+    <tr>
+      <td>Inicio de rastas — cabello corto (hasta oreja)</td>
+      <td>₡12.000 – ₡18.000</td>
+      <td>2–3 horas</td>
+      <td>Crochet / interlock</td>
+    </tr>
+    <tr>
+      <td>Inicio de rastas — cabello medio (hombros)</td>
+      <td>₡20.000 – ₡30.000</td>
+      <td>3–5 horas</td>
+      <td>Incluye punta cerrada</td>
+    </tr>
+    <tr>
+      <td>Inicio de rastas — cabello largo (espalda media o más)</td>
+      <td>₡35.000 – ₡50.000</td>
+      <td>5–8 horas</td>
+      <td>Puede variar por grosor</td>
+    </tr>
+    <tr>
+      <td>Mantenimiento básico (raíz y forma)</td>
+      <td>₡7.000 – ₡15.000</td>
+      <td>1–2 horas</td>
+      <td>Cada 1–2 meses recomendado</td>
+    </tr>
+    <tr>
+      <td>Retoque completo (raíz + puntas + definición)</td>
+      <td>₡15.000 – ₡25.000</td>
+      <td>2–4 horas</td>
+      <td>Ideal cada 3–4 meses</td>
+    </tr>
+    <tr>
+      <td>Unión de rastas sueltas / reparación</td>
+      <td>Desde ₡5.000 c/u</td>
+      <td>15–30 min c/u</td>
+      <td>Según cantidad</td>
+    </tr>
+    <tr>
+      <td>Extensiones de rastas</td>
+      <td>₡25.000 – ₡50.000</td>
+      <td>4–7 horas</td>
+      <td>No incluye costo de extensiones</td>
+    </tr>
+    <tr>
+      <td>Decoración (cintas, cuentas, hilos)</td>
+      <td>₡2.000 – ₡5.000 c/u</td>
+      <td>-</td>
+      <td>-</td>
+    </tr>
+  </table>
+</section>
+
+<section id="contact">
+  <h2>Contacto</h2>
+  <div class="contact-info">
+    <p>📍 Ubicación: San Rafael De Heredia, en la esquina del bar restaurante El Paraíso</p>
+    <p>📞 Teléfono / WhatsApp: <a href="https://wa.me/50650662319505" class="btn" target="_blank">50662319505</a></p>
+  </div>
+</section>
+
+<section id="socials">
+  <h2>Redes Sociales</h2>
+  <div class="socials">
+    <a href="https://www.instagram.com/rxpboikxneki?igsh=MWJ3eHY5MTZ4bW80bg==" target="_blank">Instagram</a>
+  </div>
+</section>
+
+<footer>
+  &copy; 2025 RxpDreads | Todos los derechos reservados
+</footer>
+
+</body>
+</html>
